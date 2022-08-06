@@ -1,3 +1,5 @@
+using ApiGateway.Middleware;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -30,9 +32,14 @@ namespace ApiGateway
             {
                 services.AddOcelot();
             });
+            builder.ConfigureLogging((logging) =>
+            {
+                logging.AddConsole();
+            });
             builder.Configure(app =>
             {
                 app.UseOcelot().Wait();
+                app.UseMiddleware<LoggingMiddleware>();
             });
             builder.Build().Run();
         }

@@ -1,6 +1,7 @@
 ﻿using CQRSDemoAPI.Command;
 using CQRSDemoAPI.Core.Command;
 using CQRSDemoAPI.Domain.Model;
+using Domain.Interfaces.Repository;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,12 @@ namespace CQRSDemoAPI.Handler
 {
     public class AddTodoHandler : IRequestHandler<AddTodoCommand, Todo>
     {
+        private ITodoRepository _repository;
+        public AddTodoHandler(ITodoRepository repository)
+        {
+            this._repository = repository;
+        }
+
         public Task<Todo> Handle(AddTodoCommand request, CancellationToken cancellationToken)
         {
             var todo = new Todo
@@ -19,7 +26,7 @@ namespace CQRSDemoAPI.Handler
                 TaskId = 1111,
                 TaskName = request.TaskName
             };
-            return Task.FromResult(todo);
+            return _repository.AddTodo(todo);
         }
     }
 }

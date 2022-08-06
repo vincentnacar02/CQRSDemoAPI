@@ -7,6 +7,8 @@ using MediatR;
 using CQRSDemoAPI.Core.Pipeline;
 using CQRSDemoAPI.Core.Filter;
 using FluentValidation.AspNetCore;
+using Domain.Interfaces.Repository;
+using Infrastructure.Repository;
 
 namespace Core
 {
@@ -25,6 +27,7 @@ namespace Core
 
             services.AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingInterceptor<,>));
             services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+            services.AddScoped(typeof(ITodoRepository), typeof(TodoRepository));
 
             return services;
         }

@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{AD57B49D-7844-4CAF-8D19-8E2CC0845139}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TodoMicroservice", "TodoMicroservice", "{E68B31B0-6A80-4170-9EDE-2C85EAD9370D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{3019E69D-076F-4D61-8AB9-167B16447520}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +37,19 @@ Global
 		{AD57B49D-7844-4CAF-8D19-8E2CC0845139}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD57B49D-7844-4CAF-8D19-8E2CC0845139}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD57B49D-7844-4CAF-8D19-8E2CC0845139}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3019E69D-076F-4D61-8AB9-167B16447520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3019E69D-076F-4D61-8AB9-167B16447520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3019E69D-076F-4D61-8AB9-167B16447520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3019E69D-076F-4D61-8AB9-167B16447520}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F5DBEDFD-C900-4865-88CC-3B15F1796059} = {E68B31B0-6A80-4170-9EDE-2C85EAD9370D}
+		{E9DAE18D-FF7A-4D60-843E-4D51B0F13F19} = {E68B31B0-6A80-4170-9EDE-2C85EAD9370D}
+		{FA689CC7-6F0C-4866-A73E-88C9ACA410EC} = {E68B31B0-6A80-4170-9EDE-2C85EAD9370D}
+		{AD57B49D-7844-4CAF-8D19-8E2CC0845139} = {E68B31B0-6A80-4170-9EDE-2C85EAD9370D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25063E45-DBB2-4157-8A4A-0466228AC8FD}

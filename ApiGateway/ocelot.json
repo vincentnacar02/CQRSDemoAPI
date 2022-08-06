@@ -1,0 +1,31 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5003"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/todo",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/todo",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44354
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/todo",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/todo",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44354
+        }
+      ]
+    }
+  ]
+}

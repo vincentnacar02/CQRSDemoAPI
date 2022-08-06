@@ -1,5 +1,6 @@
 ﻿using CQRSDemoAPI.Command;
-using CQRSDemoAPI.Model;
+using CQRSDemoAPI.Core.Command;
+using CQRSDemoAPI.Domain.Model;
 using MediatR;
 using System;
 using System.Collections.Generic;

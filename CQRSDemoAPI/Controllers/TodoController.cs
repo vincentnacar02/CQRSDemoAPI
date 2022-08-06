@@ -1,6 +1,5 @@
-﻿using CQRSDemoAPI.Command;
-using CQRSDemoAPI.Model;
-using CQRSDemoAPI.Query;
+﻿using CQRSDemoAPI.Core.Command;
+using CQRSDemoAPI.Core.Query;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;

@@ -1,5 +1,5 @@
-﻿using CQRSDemoAPI.Model;
-using CQRSDemoAPI.Query;
+﻿using CQRSDemoAPI.Core.Query;
+using CQRSDemoAPI.Domain.Model;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CQRSDemoAPI.Handler
+namespace CQRSDemoAPI.Core.Handler
 {
     public class GetTodosHandler : IRequestHandler<GetTodosQuery, List<Todo>>
     {

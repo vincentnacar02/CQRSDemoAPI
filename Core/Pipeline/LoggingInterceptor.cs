@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CQRSDemoAPI.Pipeline
+namespace CQRSDemoAPI.Core.Pipeline
 {
     public class LoggingInterceptor<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : MediatR.IRequest<TResponse>
     {

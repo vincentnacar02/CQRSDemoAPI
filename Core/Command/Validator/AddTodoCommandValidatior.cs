@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿using CQRSDemoAPI.Core.Command;
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Linq;

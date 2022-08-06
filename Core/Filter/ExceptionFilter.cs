@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CQRSDemoAPI.Filter
+namespace CQRSDemoAPI.Core.Filter
 {
     public class ExceptionFilter : Attribute, IExceptionFilter
     {

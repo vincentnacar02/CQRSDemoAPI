@@ -38,8 +38,8 @@ namespace ApiGateway
             });
             builder.Configure(app =>
             {
-                app.UseOcelot().Wait();
                 app.UseMiddleware<LoggingMiddleware>();
+                app.UseOcelot().Wait();
             });
             builder.Build().Run();
         }
